@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Website Home</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+   <div class="overlay">
+        <h1>Lokesh's biggest shopping market In India</h1>
+        <p>style up your dressings with our stunning collections.</p>
+        <a href="demo.html" class="btn">Start Styling</a>
+    </div>
+</body>
+</html>
+<style>
+    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif ;
+}
+
+body {
+    background-image: url(loke.png.jpg);
+    background-position:left,bottom;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+}
+
+.overlay {
+   
+    background-color:rgba(0, 0, 0, 0.603);
+    padding: 40px 60px;
+    border-radius: 30px;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+
+.overlay h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    animation: slideInTop 1s ease-in-out;
+    text-transform: capitalize;
+}
+
+.overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    animation: slideInBottom 1s ease-in-out;
+}
+
+.btn {
+    padding: 12px 30px;
+    background-color: #ff4081;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: fadeInUp 2s ease-in-out;
+    text-align: center;
+    
+    
+}
+
+.btn:hover {
+    background-color: #e91e63;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+</style>

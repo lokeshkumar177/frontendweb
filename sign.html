@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="input-group">
+                    <input type="text" id="username" required>
+                    <label for="username">Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" required>
+                    <label for="password">Password</label>
+                </div>
+                <button type="submit"><a href="home.html" style="color: white; text-decoration: none;">Create Account</a></button>
+            </form>
+            <p id="message"></p>
+            <p class="toggle-text">
+                Already have an account? <a href="home.html">Login here</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="signup.js"></script>
+</body>
+</html>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    /*background: linear-gradient(to right, #8360c3, #2ebf91);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+    /*background: white;*/
+    color: black;
+    background-color: rgba(0, 0, 0, 0.342);
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    animation: fadeInUp 1s ease-out;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+}
+
+label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #aaa;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+    top: -8px;
+    font-size: 12px;
+    /*color: #2ebf91;
+    background: white;*/
+    color: black;
+    padding: 0 4px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+   /* background-color: #2ebf91;*/
+   background-color: black;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #259d7f;
+}
+
+#message {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: red;
+}
+
+.toggle-text {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: black;
+}
+
+.toggle-text a {
+   /* color: #2ebf91;*/
+   color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+.toggle-text a:hover{
+    color: #259d7f;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+</style>

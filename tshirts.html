@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clothing Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .section {
+            background: #fafafa;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+            padding: 16px;
+            text-align: center;
+            transition: box-shadow 0.2s;
+        }
+        .section:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+        .section img {
+            width: 100%;
+            max-width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+        .section button {
+            background: #0078d7;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 18px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .section button:hover {
+            background: #005fa3;
+        }
+        .section-title {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.navbar-links{
+display: flex;
+column-gap: 20px;
+}
+.navbar-links a{
+text-decoration: none;
+color: #1D232c;
+}
+.navbar-links a:hover{
+    text-decoration: underline;
+}
+.navbar-menu-toggle{
+    display: none;
+}
+
+        @media (max-width: 900px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+      <nav class="navbar">
+        <h1>nostra</h1>
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="demo.html">home</a></p>
+            <p class="navbar-link"><a href="coll.html">collections</a></p>
+            <p class="navbar-link"><a href="contact.html">contact</a></p>
+        </div>
+        <div class="navbar-menu-toggle" onclick="shownav()">
+            <i class="fa-solid fa-bars"></i>
+       </div>
+    </nav>
+    <div class="side-navbar">
+        <p style="text-align: right;" onclick="closenav()">
+            <i class="fa-solid fa-xmark"></i>
+        </p>
+        
+    </div>
+    <div class="gallery">
+        <div class="section">
+            <div class="section-title">T-Shirt</div>
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="T-Shirt">
+            <button>Buy T-Shirt</button>
+        </div>
+        <div class="section">
+            <div class="section-title">Jeans</div>
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=81" alt="Jeans">
+            <button>Buy Jeans</button>
+        </div>
+        <div class="section">
+            <div class="section-title">Jacket</div>
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=82" alt="Jacket">
+            <button>Buy Jacket</button>
+        </div>
+        <div class="section">
+            <div class="section-title">Dress</div>
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=83" alt="Dress">
+            <button>Buy Dress</button>
+        </div>
+        <div class="section">
+            <div class="section-title">Skirt</div>
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=84" alt="Skirt">
+            <button>Buy Skirt</button>
+        </div>
+        <div class="section">
+            <div class="section-title">Sweater</div>
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=85" alt="Sweater">
+            <button>Buy Sweater</button>
+        </div>
+        <div class="section">
+            <div class="section-title">Shorts</div>
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=86" alt="Shorts">
+            <button>Buy Shorts</button>
+        </div>
+        <div class="section">
+            <div class="section-title">Shoes</div>
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=87" alt="Shoes">
+            <button>Buy Shoes</button>
+        </div>
+    </div>
+</body>
+</html>

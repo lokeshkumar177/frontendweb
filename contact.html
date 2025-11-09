@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <div class="input-group">
+                    <input type="text" id="name" required>
+                    <label for="name">Your Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Your Email</label>
+                </div>
+                <div class="input-group">
+                    <textarea id="messageBox" rows="4" required></textarea>
+                    <label for="messageBox">Your Message</label>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="statusMessage"></p>
+            <p class="toggle-text">
+                <a href="index.html">Back to Home</a>
+            </p>
+        </div>
+    </div>
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to right, #8360c3, #2ebf91);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    animation: fadeInUp 1s ease-out;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    resize: none;
+}
+
+label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #aaa;
+    pointer-events: none;
+    transition: 0.3s ease;
+    background: white;
+    padding: 0 4px;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:focus + label,
+textarea:not(:placeholder-shown) + label {
+    top: -8px;
+    font-size: 12px;
+    color: #2ebf91;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2ebf91;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #259d7f;
+}
+
+#statusMessage {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: red;
+}
+
+.toggle-text {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #444;
+}
+
+.toggle-text a {
+    color: #2ebf91;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+    </style>
+
+    <script src="contact.js"></script>
+</body>
+</html>
+

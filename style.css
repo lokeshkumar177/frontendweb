@@ -1,0 +1,220 @@
+/*body{
+    background-color:rgba(0, 0, 0, 0.5) ;
+}*/
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, sans-serif ;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   position: sticky;
+   top: 0;
+   left: 0;
+   z-index: 100;
+   background-color: whitesmoke;
+}
+.navbar-links{
+display: flex;
+column-gap: 20px;
+}
+.navbar-links a{
+text-decoration: none;
+color: #1D232c;
+}
+.navbar-links a:hover{
+    text-decoration: underline;
+}
+.navbar-menu-toggle{
+    display: none;
+}
+.new-arrival{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+.new-arrival-container{
+    position: relative;
+    flex-basis: 20%;
+    
+}
+.new-arrival button{
+    padding-left:10% ;
+    padding-right: 10%;
+    padding-bottom: 5%;
+    padding-top:5% ;
+    margin-top: 10px;
+    color: #1D232c;
+    position: absolute;
+    top: 50%;
+    left: 18%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+@media screen and (max-width:700px) {
+    .navbar-menu-toggle{
+        display: block;
+
+    }
+.navbar-links{
+    display: none;
+}
+
+}
+.side-navbar{
+    background-color: #1D232c;
+    width: 30%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -40%;
+    padding: 20px;
+    color: white;
+    transition: 1s;
+    z-index: 100;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+    
+}
+.header-button{
+padding-left: 20px;
+padding-right: 20px;
+padding-bottom: 10px;
+padding-top: 10px;
+background-color: #1D232c;
+color: white;
+cursor: pointer;
+
+}
+.service{
+    padding: 20px;
+}
+.service-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.service-container-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 19px;
+    margin-bottom: 10px;
+}
+.service-container-1 div{
+    background-color: #F2F4F7;
+    border-radius: 5px;
+    padding: 10px;
+}
+.header button{
+    margin-top: 20px;
+}
+.side-navbar-link{
+    margin-bottom: 30px;
+}
+.side-navbar-links a{
+    color: white;
+    text-decoration: none;
+}
+.side-navbar-links a:hover{
+    text-decoration: underline;
+}
+.img{
+    width: 300px;
+    height: 300px;
+    border-radius: 40px;
+    box-shadow: 10px 10px 20px black;
+}
+.img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.new-arrival img{
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+   }
+   .most{
+    padding-left: 20px;
+    padding-top: 20px;
+    
+   }
+   .news{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    gap: 10px;
+   }
+   .search{
+    padding: 11px;
+    width: 80vw;
+    border-radius: 5px;
+    border: solid;
+   }
+   .subs{
+    padding-left: 20px;
+padding-right: 20px;
+padding-bottom: 10px;
+padding-top: 10px;
+background-color: #1D232c;
+color: white;
+cursor: pointer;
+border-radius: 10px;
+   }
+   .footer{
+    background-color: #1D232c;
+    margin-top: 20px;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    }
+    .fonts{
+        margin-top: 10px;
+    }
+    .para{
+        margin-top: 10px;
+    }
+    .inp input{
+       margin-top: 19px;
+       width: 60vw;
+       padding: 11px;
+       border-radius: 20px;
+       border-style: solid;
+    }
+    .relation{
+        font-size: 30px;
+        position: fixed;
+        right: 10px;
+        top: 35%;
+    }
+    .relation a{
+        display: flex;
+        margin: 10px;
+        text-decoration: none;
+    }
+   .relation a :hover{
+    background-color: black;
+    color: white;
+   }
+  .six{
+    position: absolute;
+    left: 22%;
+    margin-top: 20px;
+    font-size: 30px;
+  }
+ 

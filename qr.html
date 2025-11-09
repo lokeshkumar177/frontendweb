@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Code Payment - Clothing Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 30px;
+    }
+    .container {
+      color: black;
+      max-width: 400px;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.267);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    .qr-section {
+      display: none;
+      margin-top: 20px;
+    }
+    .qr-section img {
+      width: 250px;
+      height: 250px;
+      margin-bottom: 15px;
+    }
+    button {
+      background-color: rgba(0, 0, 0, 0.849);
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    .message {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Pay via QR Code</h2>
+    <p>Click below to pay using UPI / Wallet</p>
+    <p>we can pay with any UPI apps</p>
+    <button onclick="showQR()">Show QR Code</button>
+
+    <div class="qr-section" id="qrSection">
+      <img src="c:\Users\admin\Downloads\qr code.jpg" alt="QR Code for Payment">
+      <p>Scan the QR with your UPI / Wallet App</p>
+      <button onclick="confirmPayment()">I've Paid</button>
+    </div>
+
+    <div class="message" id="message"></div>
+  </div>
+
+  <script>
+    function showQR() {
+      document.getElementById("qrSection").style.display = "block";
+      document.getElementById("message").textContent = "";
+    }
+
+    function confirmPayment() {
+      document.getElementById("message").textContent = "Payment confirmed! Thank you for your purchase.";
+      document.getElementById("message").style.color = "green";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Options - Clothing Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 40px;
+    }
+    .container {
+      color:black;
+      max-width: 500px;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.295);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .payment-option {
+      margin: 10px 0;
+    }
+    .payment-option input {
+      margin-right: 10px;
+    }
+    .form-section {
+      display: none;
+      margin-top: 20px;
+    }
+    input[type="text"], input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: rgba(0, 0, 0, 0.815);
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    .message {
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Choose your option</h2>
+
+    <div class="payment-option">
+      <input type="radio" name="payment" id="card" onclick="showForm('cardForm')">
+      <label for="card">Credit/Debit Card</label>
+    </div>
+
+    <div class="payment-option">
+      <input type="radio" name="payment" id="paypal" onclick="showForm('paypalForm')" >
+      <label for="paypal">Phone Pay</label>
+    </div>
+
+    <div class="payment-option">
+      <input type="radio" name="payment" id="googlepay" onclick="showForm('googlePayForm')">
+      <label for="googlepay">Google Pay</label>
+    </div>
+
+    <!-- Credit/Debit Card Form -->
+    <div class="form-section" id="cardForm">
+      <input type="text" placeholder="Name on Card">
+      <input type="text" placeholder="Card Number">
+      <input type="text" placeholder="MM/YY">
+      <input type="text" placeholder="CVV">
+    </div>
+
+    <!-- PayPal Info -->
+    <div class="form-section" id="paypalForm">
+      <input type="text" placeholder="Phone pay Email">
+    </div>
+
+    <!-- Google Pay Info -->
+    <div class="form-section" id="googlePayForm">
+      <input type="text" placeholder="Google Pay Linked Email">
+    </div>
+
+    <button onclick="submitPayment()">Pay Now</button>
+
+    <div class="message" id="message"></div>
+  </div>
+
+  <script>
+    function showForm(formId) {
+      const forms = document.querySelectorAll('.form-section');
+      forms.forEach(form => form.style.display = 'none');
+      document.getElementById(formId).style.display = 'block';
+    }
+
+    function submitPayment() {
+      const message = document.getElementById('message');
+      const selected = document.querySelector('input[name="payment"]:checked');
+
+      if (!selected) {
+        message.textContent = "Please select a payment method.";
+        message.style.color = "red";
+        return;
+      }
+
+      message.textContent = "Payment processed successfully with " + selected.id + "!";
+      message.style.color = "green";
+    }
+  </script>
+
+</body>
+</html>
